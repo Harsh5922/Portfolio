@@ -21,6 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (command === 'clear') {
                 outputField.innerHTML = '';
+            } else if (command === 'cd projects') {
+                window.location.href = 'projects.html'; 
+            } else if (command === 'cd home') {
+                window.location.href = 'index.html';
             } else if (commands[command]) {
                 outputField.innerHTML += `${commands[command]}\n`;
             } else {

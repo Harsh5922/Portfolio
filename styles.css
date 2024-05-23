@@ -1,7 +1,7 @@
 body {
     position: relative;
     background: black;
-    color: rgb(128, 0, 19);
+    color: green;
     font-family: monospace;
     margin: 0;
     height: 100vh;
@@ -28,6 +28,7 @@ body {
     padding: 20px;
     border: 5px solid green;
     z-index: 1;
+    
 }
 
 #output {
@@ -38,7 +39,7 @@ body {
 #input {
     width: 100%;
     background: rgba(0, 0, 0, 1);
-    color: rgb(128, 0, 19);
+    color: green;
     border: none;
     outline: none;
     font-family: monospace;
@@ -46,9 +47,21 @@ body {
 }
 
 
-#profile-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
+#projects {
+    margin-top: 20px;
 }
+
+#projects h2 {
+    color: green;
+    text-decoration: underline;
+}
+
+#projects ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#projects li {
+    margin-bottom: 20px;
+}
+
