@@ -65,3 +65,18 @@ body {
     margin-bottom: 20px;
 }
 
+#connect ul {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+#connect i {
+    color: green;
+    font-size: 50px; /* Set a consistent icon size */
+    transition: transform 0.2s;
+}
+
+#connect i:hover {
+    transform: scale(1.2);
+}

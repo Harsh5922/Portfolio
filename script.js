@@ -4,12 +4,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const outputField = document.getElementById('output');
 
     const commands = {
-        'help': 'Available commands: help, ls, cd [section], clear',
-        'ls': 'home projects about contact',
+        'help': 'Available commands:\n' +
+        'help - Display available commands\n' +
+        'ls - List the pages you can navigate to\n' +
+        'cd [section] - Change the webpage\n' +
+        'clear - Clear the terminal',
+        'ls': '"home", "projects", "experience", "connect"',
         'home': 'This is the home directory. Use "ls" to list available sections.',
         'projects': 'This is the projects section. Here you will find various projects I have worked on.',
-        'about': 'This is the about section. Here you will find information about me.',
-        'contact': 'This is the contact section. Here you will find ways to contact me.',
+        'experience': 'This is the about section. Here you will find information about me.',
+        'connect': 'This is the contact section. Here you will find ways to contact me.',
         'clear': ''
     };
 
@@ -17,14 +21,18 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'Enter') {
             const command = inputField.value.trim();
             inputField.value = '';
-            outputField.innerHTML += `> ${command}\n`;
+            outputField.innerHTML += `>${command}\n`;
 
             if (command === 'clear') {
                 outputField.innerHTML = '';
             } else if (command === 'cd projects') {
                 window.location.href = 'projects.html'; 
+            } else if (command === 'cd experience') {
+                window.location.href = 'experience.html'; 
             } else if (command === 'cd home') {
                 window.location.href = 'index.html';
+            } else if (command === 'cd connect') {
+                window.location.href = 'connect.html';
             } else if (commands[command]) {
                 outputField.innerHTML += `${commands[command]}\n`;
             } else {
