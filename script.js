@@ -33,6 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.href = 'index.html';
             } else if (command === 'cd connect') {
                 window.location.href = 'connect.html';
+            } else if (command === 'cd ..') {
+                window.history.back();
             } else if (commands[command]) {
                 outputField.innerHTML += `${commands[command]}\n`;
             } else {
